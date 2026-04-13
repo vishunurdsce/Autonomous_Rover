@@ -1,0 +1,11 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Webots Specific
+build/
+*.bak
+*.cache/
+*.swp
+.DS_Store

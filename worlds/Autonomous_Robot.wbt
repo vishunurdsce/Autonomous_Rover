@@ -1,0 +1,328 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/RectangleArena.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation 0.27652975354828985 -0.7146964061988447 0.6424487079673973 5.602733253884868
+  position -12.67055884138611 6.744047965729131 7.063902935009526
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+DirectionalLight {
+  ambientIntensity 0.3
+  direction -0.5 -1 -0.5
+  intensity 3
+  castShadows TRUE
+}
+RectangleArena {
+  translation 0.57 0 0
+  floorSize 10 10
+  floorAppearance Appearance {
+    material Material {
+      diffuseColor 0.6 0.3 0.15
+    }
+  }
+}
+Solid {
+  translation -0.14198776733620447 -2.7938893541917063 0.13940519999999998
+  rotation -9.022691519380433e-14 -1.0269895480762847e-13 -1 0.00011146345686281415
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 0.5 0.5 0.5
+        }
+      }
+      geometry Box {
+        size 0.3 0.3 0.3
+      }
+    }
+  ]
+  name "block1"
+  boundingObject Box {
+    size 0.3 0.3 0.3
+  }
+  physics Physics {
+  }
+  linearVelocity -4.0259280395038597e-17 -8.148457468306399e-18 2.7009358108216803e-16
+  angularVelocity 1.4844491853659883e-16 -2.807101228607802e-16 1.8074184416914718e-17
+}
+Solid {
+  translation 3.279769999933976 -1.2594232487551444 0.14058239999999997
+  rotation -1.7544394109566889e-06 1.0544296207966469e-07 -0.9999999999984555 6.477026802201409e-11
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 0.45 0.45 0.45
+        }
+      }
+      geometry Box {
+        size 0.4 0.2 0.3
+      }
+    }
+  ]
+  name "block2"
+  boundingObject Box {
+    size 0.4 0.2 0.3
+  }
+  physics Physics {
+  }
+  linearVelocity 3.975766093620765e-18 -5.684403067614757e-18 1.883829655203869e-16
+  angularVelocity 2.9194973990966516e-18 -6.433035097586027e-17 -5.621747814102277e-17
+}
+Solid {
+  translation -2.212731785742674 1 0.14058239999999997
+  rotation -0.0012095140255458667 0.44186625518430533 -0.8970801244065216 8.442910291221589e-17
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 0.4 0.4 0.4
+        }
+      }
+      geometry Box {
+        size 0.2 0.4 0.3
+      }
+    }
+  ]
+  name "block3"
+  boundingObject Box {
+    size 0.2 0.4 0.3
+  }
+  physics Physics {
+  }
+  linearVelocity 2.5092391221490868e-17 4.861433872415907e-18 2.3030730175068586e-16
+  angularVelocity -1.1368641862622739e-16 1.2078068515189387e-16 -8.983906978117567e-19
+}
+Solid {
+  translation 1.55001 2.1598758997306833 0.13940519999999995
+  rotation -0.3208021489476262 0.20434506123353843 -0.9248400278859293 1.1594447553646205e-16
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 0.55 0.55 0.55
+        }
+      }
+      geometry Box {
+        size 0.3 0.3 0.3
+      }
+    }
+  ]
+  name "block4"
+  boundingObject Box {
+    size 0.3 0.3 0.3
+  }
+  physics Physics {
+  }
+  linearVelocity -1.463313925524226e-17 -2.115746978853592e-17 2.703217675459619e-16
+  angularVelocity -1.3901163820185952e-16 -3.944304526105059e-31 1.9575444933951606e-17
+}
+Robot {
+  translation 0.7434478481363759 3.7961673689942854 0.096612303418699
+  rotation -4.297214168832976e-07 2.2331360937687157e-06 -0.9999999999974142 2.713268886498893
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 0.1 0.1 0.1
+        }
+      }
+      geometry Box {
+        size 0.4 0.3 0.1
+      }
+    }
+    InertialUnit {
+      name "imu"
+    }
+    Display {
+      width 256
+      height 128
+    }
+    DistanceSensor {
+      translation 0.2 0.1 0
+      rotation 0 0 1 0.5
+      name "ds_left"
+      lookupTable [
+        0 1024 0
+        0.5 0 0
+      ]
+    }
+    DistanceSensor {
+      translation 0.2 -0.1 0
+      rotation 0 0 1 -0.5
+      name "ds_right"
+      lookupTable [
+        0 1024 0
+        0.5 0 0
+      ]
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position 816.8373186524811
+        axis 0 1 0
+        anchor 0.15 0.17 0
+      }
+      device [
+        RotationalMotor {
+          name "left_motor"
+        }
+      ]
+      endPoint Solid {
+        translation 0.15 0.17 0
+        rotation 0.9998651223085296 0.011613272582455779 -0.011613315240466316 1.5709348867878403
+        children [
+          Shape {
+            appearance Appearance {
+              material Material {
+                diffuseColor 1 0.5 0
+              }
+            }
+            geometry Cylinder {
+              height 0.04
+              radius 0.1
+            }
+          }
+        ]
+        name "wheel_fl"
+        boundingObject Cylinder {
+          height 0.04
+          radius 0.1
+        }
+        physics Physics {
+        }
+        linearVelocity -0.4557069929521122 -0.20754141255630834 6.07014960161462e-07
+        angularVelocity 2.082217648045475 -4.559266432428921 -0.004319270766058183
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position 816.8664482823486
+        axis 0 1 0
+        anchor -0.15 0.17 0
+      }
+      device [
+        RotationalMotor {
+          name "left_rear_motor"
+        }
+      ]
+      endPoint Solid {
+        translation -0.15 0.17 0
+        rotation 0.9993150444730621 0.026167124981175294 -0.026167221098568758 1.571485190161667
+        children [
+          Shape {
+            appearance Appearance {
+              material Material {
+                diffuseColor 1 0.5 0
+              }
+            }
+            geometry Cylinder {
+              height 0.04
+              radius 0.1
+            }
+          }
+        ]
+        name "wheel_rl"
+        boundingObject Cylinder {
+          height 0.04
+          radius 0.1
+        }
+        physics Physics {
+        }
+        linearVelocity -0.45519347542222566 -0.20866597902216502 5.816038307635279e-07
+        angularVelocity 2.0822571083798294 -4.55928007837725 -0.004358110886704223
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position 1005.1784991107941
+        axis 0 1 0
+        anchor 0.15 -0.17 0
+      }
+      device [
+        RotationalMotor {
+          name "right_motor"
+        }
+      ]
+      endPoint Solid {
+        translation 0.15 -0.17 0
+        rotation 0.9957152719930273 -0.06538755886985684 0.06538779905221287 1.5750939205305328
+        children [
+          Shape {
+            appearance Appearance {
+              material Material {
+                diffuseColor 1 0.5 0
+              }
+            }
+            geometry Cylinder {
+              height 0.04
+              radius 0.1
+            }
+          }
+        ]
+        name "wheel_fr"
+        boundingObject Cylinder {
+          height 0.04
+          radius 0.1
+        }
+        physics Physics {
+        }
+        linearVelocity -0.4544325028637113 -0.2069594752067583 -5.823116680961614e-07
+        angularVelocity 2.0720240188508634 -4.5369798810978725 -0.004302925338015005
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position 1005.3672806757007
+        axis 0 1 0
+        anchor -0.15 -0.17 0
+      }
+      device [
+        RotationalMotor {
+          name "right_rear_motor"
+        }
+      ]
+      endPoint Solid {
+        translation -0.15 -0.17 0
+        rotation 0.9991702288820695 0.028799718943444703 -0.028799824730913505 1.571630115471932
+        children [
+          Shape {
+            appearance Appearance {
+              material Material {
+                diffuseColor 1 0.5 0
+              }
+            }
+            geometry Cylinder {
+              height 0.04
+              radius 0.1
+            }
+          }
+        ]
+        name "wheel_rr"
+        boundingObject Cylinder {
+          height 0.04
+          radius 0.1
+        }
+        physics Physics {
+        }
+        linearVelocity -0.45391897979528834 -0.20808397366454712 -6.077227609977367e-07
+        angularVelocity 2.0720643179148475 -4.536993117720157 -0.0043407887016608145
+      }
+    }
+  ]
+  boundingObject Box {
+    size 0.4 0.3 0.1
+  }
+  physics Physics {
+  }
+  controller "imu_controller"
+  linearVelocity -0.45481299148615867 -0.20781270089962303 -3.5391132927394056e-10
+  angularVelocity -3.2814828001597954e-06 -1.4035160446534463e-06 -0.004120876822351375
+}
