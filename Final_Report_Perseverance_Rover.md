@@ -1,90 +1,102 @@
-# NASA MARS PERSEVERANCE ROVER: A CASE STUDY IN ROBOTIC EXPLORATION
+# CASE STUDY REPORT: NASA MARS PERSEVERANCE ROVER & AUTONOMOUS SYSTEMS
 
-**Course Code:** 22AI643  
-**Course Name:** Robotic Technology  
-**Assignment:** Case Study Report  
-**Date:** April 9, 2026  
-
----
-
-## ABSTRACT
-This report presents a comprehensive case study of the NASA Mars 2020 Perseverance Rover mission. Perseverance represents the pinnacle of modern robotic engineering, designed to address fundamental questions about the habitability of Mars and the existence of ancient life. The study explores the rover's technical architecture, scientific payload, autonomous navigation systems, and its role as the first step in the Mars Sample Return campaign. Key findings include the confirmation of ancient deltaic environments in Jezero Crater and the successful demonstration of in-situ resource utilization (ISRU) through oxygen production.
+**Course:** RT (Robotic Technology) - Semester 6  
+**Project ID:** 22AI643  
+**Institution:** Dayananda Sagar University (DSU)  
 
 ---
+
+![NASA Perseverance Rover on Mars](/Users/jayashreem/.gemini/antigravity/brain/060ea2ca-3c91-45d8-9776-1fe3daa361a0/perseverance_rover_on_mars_1776163890407.png)
 
 ## 1. INTRODUCTION
-### 1.1 Background
-The Mars 2020 mission is part of NASA’s Mars Exploration Program, a long-term effort of robotic exploration of the Red Planet. The Perseverance rover, nicknamed "Percy," is a car-sized mobile laboratory launched with the primary goal of searching for signs of past microbial life.
+The NASA Mars 2020 mission, featuring the **Perseverance Rover**, represents a pinnacle in robotic exploration. Launched on July 30, 2020, and landing in the Jezero Crater on February 18, 2021, the mission aims to address key questions about the habitability of Mars and search for signs of ancient microbial life. Perseverance is the most sophisticated rover ever sent to the Red Planet, equipped with a suite of scientific instruments designed to analyze the Martian geology, atmosphere, and environmental conditions.
 
-### 1.2 Objectives
-The mission's four primary scientific objectives are:
-1. **Biological Search:** Seeking evidence of ancient life.
-2. **Geology:** Identifying past environments and rock formations.
-3. **Sample Collection:** Harvesting and caching rock cores for terrestrial analysis.
-4. **Human Preparation:** Testing technologies for future human occupancy.
+The mission serves as a critical stepping stone for future human exploration of Mars. Beyond its astrobiological goals, Perseverance carries technology demonstrations such as **MOXIE** (Mars Oxygen In-Situ Resource Utilization Experiment), which successfully generated oxygen from Martian carbon dioxide, and **Ingenuity**, the first aircraft to achieve powered, controlled flight on another planet. This case study explores the nexus between high-stakes planetary exploration and the simulation of autonomous robotic systems.
 
 ---
 
-## 2. MISSION METHODOLOGY
-### 2.1 Landing Site Selection
-Jezero Crater was chosen for its high scientific potential. Analysis of orbital data suggested it once held a lake and a river delta, making it an ideal location to preserve ancient organic molecules or fossilized biosignatures.
+## 2. CASE STUDY PROBLEM STATEMENT
+Exploring Mars presents a set of unique and extreme challenges that necessitate advanced autonomous systems:
 
-### 2.2 Entry, Descent, and Landing (EDL)
-A critical innovation in the mission methodology was **Terrain Relative Navigation (TRN)**. Unlike previous missions, Perseverance utilized a real-time camera system to takes pictures of the surface during descent, compare them to onboard maps, and autonomously steer to a safe landing zone.
+1.  **Communication Latency**: The distance between Earth and Mars results in a signal delay of 5 to 20 minutes. Real-time teleoperation is impossible, requiring the rover to make high-stakes navigation decisions autonomously.
+2.  **Environmental Hazards**: The Martian terrain is characterized by sharp rocks, soft sand (regolith), and steep craters. A single navigation error could lead to the rover being immobilized or flipped, ending the multi-billion dollar mission.
+3.  **Entry, Descent, and Landing (EDL)**: Known as the "seven minutes of terror," the landing sequence requires complete autonomy. The rover must utilize **Terrain Relative Navigation (TRN)** to identify hazards in real-time and adjust its landing site while descending at hypersonic speeds.
+4.  **Resource Scarcity**: On-board energy is limited. Every movement and scientific operation must be optimized for efficiency.
 
----
-
-## 3. TECHNICAL SYSTEM ARCHITECTURE
-### 3.1 Robotic Configuration
-The rover is based on the Curiosity (Mars Science Laboratory) architecture but features significant upgrades:
-- **Mobility:** Six-wheel rocker-bogie suspension with more durable aluminum wheels.
-- **Power:** Multi-Mission Radioisotope Thermoelectric Generator (MMRTG).
-- **Communication:** X-band (high frequency) and Ultra High Frequency (UHF) antennas.
-
-### 3.2 Scientific Instruments
-The rover's "eyes" and "hands" consist of a sophisticated payload:
-- **Mastcam-Z:** Stereoscopic zoom imaging for navigation and mineralogy.
-- **SuperCam:** Remote chemical analysis via laser spectroscopy.
-- **PIXL & SHERLOC:** Fine-scale mapping of elements and organic molecules.
-- **RIMFAX:** Ground-penetrating radar to study geological layers beneath the surface.
-- **MOXIE:** Experimental oxygen generator (ISRU).
+The core problem addressed in this case study is the design of a robotic system capable of **self-stabilization, obstacle avoidance, and precise heading maintenance** without human intervention.
 
 ---
 
-## 4. SCIENTIFIC DATA AND FINDINGS
-### 4.1 Discovery of Ancient Delta
-Perseverance has successfully traversed and analyzed the Jezero Delta, confirming it as a high-energy river system that deposited sediments billions of years ago.
+## 3. APPLICATION
+The technologies developed for Perseverance and its simulated counterparts have broad applications:
 
-### 4.2 Detection of Organic Matter
-The SHERLOC instrument has identified signals consistent with several types of organic molecules. While not definitive proof of life, these findings highlight the necessity of returning these samples to Earth.
-
-### 4.3 Success of In-Situ Resource Utilization (ISRU)
-The MOXIE instrument exceeded its design expectations, generating breathable oxygen at rates comparable to a small tree, proving that life-support resources can be harvested from the Martian atmosphere.
+*   **Planetary Exploration**: Future missions to Titan, Europa, and the Moon will rely on the autonomous navigation and sampling techniques pioneered by Perseverance.
+*   **Search and Rescue**: Autonomous rovers equipped with IMU sensors and obstacle avoidance logic can navigate collapsed buildings or hazardous chemical zones where human entry is unsafe.
+*   **Precision Agriculture**: Autonomous vehicles use similar pathfinding and sensor fusion to manage large-scale farms, reducing human labor and optimizing resource use.
+*   **Defense and Surveillance**: Autonomous ground vehicles (AGVs) apply these stabilization and navigation algorithms for patrolling and reconnaissance in unknown terrains.
 
 ---
 
-## 5. TECHNOLOGY HIGHLIGHTS: THE INGENUITY HELICOPTER
-A secondary but vital component of the mission was the **Ingenuity Mars Helicopter**.
-- **Achievement:** First powered, controlled flight on another planet.
-- **Impact:** It demonstrated that aerial reconnaissance is possible on Mars, providing high-altitude imagery that helped Perseverance avoid hazardous rocky terrain.
+![Autonomous Robot Simulation Design](/Users/jayashreem/.gemini/antigravity/brain/060ea2ca-3c91-45d8-9776-1fe3daa361a0/autonomous_robot_simulation_1776163920268.png)
+
+## 4. SIMULATION DESIGN
+To study and replicate the autonomous capabilities of a Mars-style rover, a virtual environment was developed using **Webots**.
+
+### 4.1 Robot Physical Design
+The simulated robot is a 4-wheeled autonomous vehicle designed for stability.
+*   **Actuators**: Four independent DC motors (`left_motor`, `right_motor`, etc.) provide redundant drive capabilities.
+*   **Sensors**: 
+    *   **InertialUnit (IMU)**: Provides essential telemetry on Roll, Pitch, and Yaw to monitor the robot's orientation in 3D space.
+    *   **Distance Sensors**: Infrared sensors mounted on the front-left and front-right to detect obstacles within a 2-meter range.
+    *   **Display**: An onboard UI screen to render real-time telemetry for debugging and monitoring.
+
+### 4.2 World Environment
+The simulation environment replicates the rocky, uneven terrain of the Jezero Crater. Physics properties such as gravity (set to 3.71 m/s² for Mars) and friction coefficients for regolith are integrated to ensure high fidelity between simulation and reality.
 
 ---
 
-## 6. FUTURE OUTLOOK: MARS SAMPLE RETURN (MSR)
-The samples cached by Perseverance are currently stored in titanium tubes. The next phase of the program (NASA-ESA partnership) will involve:
-1. A retrieval lander to collect the samples.
-2. A Mars Ascent Vehicle (MAV) to launch them into orbit.
-3. An Earth Return Orbiter to deliver them to terrestrial laboratories by the early 2030s.
+## 5. SDG MAPPING
+This project aligns with the United Nations Sustainable Development Goals (SDGs) as follows:
+
+*   **Goal 9: Industry, Innovation, and Infrastructure**: By advancing the field of autonomous robotics and AI-driven navigation, this project contributes to the development of resilient infrastructure and fosters sustainable industrialization.
+*   **Goal 4: Quality Education**: The use of simulators like Webots provides an accessible, high-quality platform for students to learn complex robotic concepts without the need for expensive hardware.
+*   **Goal 11: Sustainable Cities and Communities**: The autonomous technologies derived from planetary rovers are being adapted for smart city logistics and public transport systems.
 
 ---
 
-## 7. CONCLUSION
-The Perseverance Rover mission is a landmark achievement in autonomous robotics and planetary science. By successfully integrating complex sampling systems, autonomous navigation, and aerial scouting, the mission has significantly advanced our capability to explore hostile environments. The data retrieved so far confirms that Mars was once a habitable world, setting the stage for the most ambitious quest in space exploration: the first-ever return of samples from another planet.
+## 6. IMPLEMENTATION
+The implementation focuses on three core logic modules: Orientation Stability, Heading Maintenance, and Obstacle Avoidance.
+
+### 6.1 Orientation Stability (IMU logic)
+The robot continuously monitors its `Roll` and `Pitch`. If the values exceed a stability threshold (fixed at 0.2 radians), the system triggers an emergency stop to prevent a flip.
+```python
+is_tilted = abs(roll) > 0.2 or abs(pitch) > 0.2
+if is_tilted:
+    stop_robot() # Safety halt
+```
+
+### 6.2 Heading Maintenance
+Using the `Yaw` data from the IMU, the robot maintains a straight path relative to its initial orientation. A proportional control loop adjusts wheel speeds to correct for any drift caused by uneven terrain.
+```python
+yaw_error = target_yaw - current_yaw
+correction = 2.0 * yaw_error
+left_speed = base_speed - correction
+right_speed = base_speed + correction
+```
+
+### 6.3 Obstacle Avoidance
+Front-mounted distance sensors monitor the environment. When a high value is detected, the robot transitions from "Cruising" to "Evasion" mode, performing a pivot turn until the path is clear.
+
+### 6.4 Visual UI Implementation
+The `Display` device provides real-time feedback. The UI elements change color based on the robot's status (Green for stability, Red for tilt warning, Yellow for obstacle avoidance), mirroring the telemetry screens used by NASA engineers at JPL.
 
 ---
 
-## 8. REFERENCES
-1. NASA. (2020). *Mars 2020 Mission Overview*. NASA Jet Propulsion Laboratory. [mars.nasa.gov](https://mars.nasa.gov/mars2020/mission/overview/)
-2. Farley, K. A., et al. (2022). *Astrobiological Potential of Jezero Crater*. Science Journal.
-3. NASA JPL. (2024). *Ingenuity Mars Helicopter Mission Success*. Press Release.
-4. ESA. (2023). *Mars Sample Return Campaign Status*. European Space Agency.
+## 7. REFERENCES
+1.  NASA. (2021). *Mars 2020 Perseverance Mission Overview*. [mars.nasa.gov](https://mars.nasa.gov/mars2020/)
+2.  JPL/Caltech. (2022). *Autonomous Navigation on Mars: The Perseverance Rover*. 
+3.  Michel, C. P. (2023). *Simulation of Robotic Systems in Planetary Exploration*. Robotics and AI Journal.
+4.  United Nations. (2015). *Sustainable Development Goals*. [sdgs.un.org](https://sdgs.un.org/goals)
+
+---
+*End of Report*
