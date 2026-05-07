@@ -9,3 +9,5 @@ build/
 *.cache/
 *.swp
 .DS_Store
+VIVA_PREP_GUIDE.md
+VIVA_PREP_GUIDE.txt
