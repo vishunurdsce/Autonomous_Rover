@@ -9,7 +9,6 @@ build/
 *.cache/
 *.swp
 .DS_Store
-VIVA_PREP_GUIDE.md
-VIVA_PREP_GUIDE.txt
-Case_Study_Perseverance_Details.txt
-Final_Report_Perseverance_Rover.txt
+
+# Media
+*.mp4
